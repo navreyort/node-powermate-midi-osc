@@ -1,0 +1,16 @@
+{
+  "name": "node-powermate-midi-osc",
+  "version": "0.3.0",
+  "description": "Converts powermate input to midi and osc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akito van Troyer",
+  "license": "MIT",
+  "dependencies": {
+    "midi": "^0.9.4",
+    "node-hid": "^0.5.1",
+    "node-powermate": "^0.0.3"
+  }
+}
