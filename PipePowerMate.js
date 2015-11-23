@@ -29,13 +29,12 @@ PipePowerMate.countPowerMate = function(){
 };
 
 PipePowerMate.prototype.midiWheelOut = function(value){
-
   this.curMidiValue += value;
   if(this.curMidiValue>127) this.curMidiValue=127;
   if(this.curMidiValue<0) this.curMidiValue=0;
 
   //Send control change message
-  this.midiOut.sendMessage([176,this.curMidiValue,this.channel]);
+  this.midiOut.sendMessage([176,this.channel,this.curMidiValue]);
 };
 
 PipePowerMate.prototype.oscWheelOut = function(value){

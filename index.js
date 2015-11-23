@@ -19,7 +19,7 @@ process.on('SIGINT', function() {
   for(var i=0, len = powerMates.length;i<len;i++){
     powerMates[i].close();
   }
-    midiOut.closePort();
-    oscOut.kill();
+    if(midiOut) midiOut.closePort();
+    if(oscOut) oscOut.kill();
     process.exit(0);
 });
